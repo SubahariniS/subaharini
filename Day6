@@ -1,0 +1,42 @@
+1)Age category:
+import java.util.Scanner;
+public class AgeCategory {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter age: ");
+        int age = scanner.nextInt();
+        int ageResult;
+        if (age < 0 || age > 101) {
+            ageResult = -1;
+        } else if (age <= 5) {
+            ageResult = 0;
+        } else if (age <= 12) {
+            ageResult = 1;
+        } else if (age <= 19) {
+            ageResult = 2;
+        } else if (age <= 50) {
+            ageResult = 3;
+        } else if (age <= 60) {
+            ageResult = 4;
+        } else {
+            ageResult = 5;
+        }
+        System.out.println("Age Result: " + ageResult);
+    }
+}
+2) sum of squares:
+import java.util.Scanner;
+public class SquareDigitSum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int sqdnumber = scanner.nextInt();
+        int sqdNumber_result = 0;
+        while (sqdnumber > 0) {
+            int digit = sqdnumber % 10;
+            sqdNumber_result += digit * digit;
+            sqdnumber /= 10;
+        }
+        System.out.println("Sum of squares of digits: " + sqdNumber_result);
+    }
+}
